@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -16,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_login);
 
         editTextEmail = findViewById(R.id.editTextEmail);
@@ -28,12 +31,31 @@ public class LoginActivity extends AppCompatActivity {
                 String email = editTextEmail.getText().toString().trim();
                 String password = editTextPassword.getText().toString().trim();
 
-                // Aquí deberías validar las credenciales del usuario
-                // y, si son válidas, iniciar la siguiente actividad
+                if(email.equals("user@gmail.com") &&  password.equals("123")) {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    finish();
+                }
+                // Ventana de Error
+                else {
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                    builder.setTitle("Error de inicio de sesión");
+                    builder.setMessage("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+
+
+                    builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+
+                    AlertDialog alertDialog = builder.create();
+                    alertDialog.show();
+                }
+
 
                 // Por ahora, simplemente iniciaremos la actividad principal
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                finish(); // Finalizamos LoginActivity para evitar que el usuario regrese usando el botón "Atrás"
+                // Finalizamos LoginActivity para evitar que el usuario regrese usando el botón "Atrás"
             }
         });
     }
