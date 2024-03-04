@@ -1,5 +1,6 @@
 package com.example.testing;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -17,7 +18,13 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.navigation_registros:
-
+                    startActivity(new Intent(MainActivity.this, RegistrosActivity.class));
+                    finish();
+                    break;
+                case R.id.navigation_home:
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    finish();
+                    break;
             }
             return false;
         });

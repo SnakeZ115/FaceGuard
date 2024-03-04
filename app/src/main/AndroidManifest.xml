@@ -27,6 +27,12 @@
         <activity
                 android:name=".MainActivity">
         </activity>
+        <activity
+                android:name=".RegistrosActivity">
+        </activity>
+        <activity
+                android:name=".RegistrarseActivity">
+        </activity>
     </application>
 
 </manifest>

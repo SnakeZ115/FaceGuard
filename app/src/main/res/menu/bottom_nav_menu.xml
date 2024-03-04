@@ -4,7 +4,7 @@
     <item
             android:id="@+id/navigation_home"
             android:title="Regresar"
-            android:icon="@drawable/registros"/>
+            android:icon="@drawable/botonretroceso"/>
 
     <item
             android:id="@+id/navigation_registros"

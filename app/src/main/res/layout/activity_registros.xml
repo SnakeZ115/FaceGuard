@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <TableLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:padding="16dp">
+
+            <!-- Encabezado de la tabla -->
+            <TableRow>
+                <TextView
+                        android:text="Fecha"
+                        android:textStyle="bold"
+                        android:padding="8dp"/>
+                <TextView
+                        android:text="Hora"
+                        android:textStyle="bold"
+                        android:padding="8dp"/>
+                <TextView
+                        android:text="Lugar"
+                        android:textStyle="bold"
+                        android:padding="8dp"/>
+            </TableRow>
+
+            <!-- Filas de la tabla se agregarán dinámicamente -->
+
+        </TableLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#000C1D"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:itemIconSize="70dp"
+            app:itemTextColor="#FFFFFF"
+            app:itemIconTint="#FFFFFF"
+            app:menu="@menu/bottom_nav_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

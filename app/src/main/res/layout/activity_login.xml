@@ -56,6 +56,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="44dp"
             android:backgroundTint="#F3F5F0" app:layout_constraintHorizontal_bias="0.496"/>
+    <Button
+            android:id="@+id/buttonRegistrarse"
+            android:layout_width="256dp"
+            android:layout_height="60dp"
+            android:text="Registrarse"
+            android:fontFamily="@font/metropolisbold"
+            android:textColor="#030E18"
+            app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="128dp"
+            android:backgroundTint="#F3F5F0" app:layout_constraintHorizontal_bias="0.496"/>
     <TextView
             android:text="FaceGuard"
             android:textAlignment="center"
