@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     finish();
                     break;
+                case R.id.navigation_user:
+                    startActivity(new Intent(MainActivity.this, UserActivity.class));
+                    finish();
+                    break;
+
             }
             return false;
         });

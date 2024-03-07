@@ -11,4 +11,8 @@
             android:title="Registros"
             android:icon="@drawable/registros"/>
 
+    <item android:id="@+id/navigation_user"
+          android:title="Usuario
+"         android:icon="@drawable/usuario"/>
+
 </menu>

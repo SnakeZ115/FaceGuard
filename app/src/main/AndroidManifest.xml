@@ -33,6 +33,9 @@
         <activity
                 android:name=".RegistrarseActivity">
         </activity>
-    </application>
+        <activity android:name=".UserActivity">
 
+        </activity>
+
+    </application>
 </manifest>
